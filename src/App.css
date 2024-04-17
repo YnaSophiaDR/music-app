@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+/* src/styles.css */
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  background: rgb(2,0,36);;
+  background: (180deg, rgba(2,0,36,1) 0%, rgba(14,32,9,1) 0%, rgba(0,0,0,1) 46%, rgba(0,212,255,1) 100%);
+  margin: 0;
+  padding: 0;
+  color: #ffff
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  border-radius: 30px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container > div {
+  flex: 1;
+  padding: 20px;
+  background-color: #1b1b1b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1b1b1b;
+  border-radius:20% ;
+  color: #b80000;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #252525;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container > div {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search button  */
+.InputContainer {
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  caret-color: rgb(255, 81, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding-left: 15px;
+  letter-spacing: 0.8px;
+  color: rgb(19, 19, 19);
+  font-size: 13.4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
