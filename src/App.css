@@ -1,27 +1,28 @@
-/* src/styles.css */
+/* src/App.css */
 
 body {
-  font-family:'Courier New', Courier, monospace;
-  background: rgb(2,0,36);;
-  background: (180deg, rgba(2,0,36,1) 0%, rgba(14,32,9,1) 0%, rgba(0,0,0,1) 46%, rgba(0,212,255,1) 100%);
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  color: #ffff
+  color: #333;
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
-  border-radius: 30px;
-  
 }
 
 .container > div {
-  flex: 1;
+  width: 100%;
+  max-width: 600px;
   padding: 20px;
-  background-color: #1b1b1b;
+  background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 ul {
@@ -39,8 +40,8 @@ button {
   font-size: 16px;
   border: none;
   background-color: #1b1b1b;
-  border-radius:20% ;
-  color: #b80000;
+  color: #fff;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -48,44 +49,113 @@ button:hover {
   background-color: #252525;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container > div {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-/* Search button  */
 .InputContainer {
-  width: 210px;
-  height: 50px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
-  border-radius: 30px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  margin-bottom: 20px;
 }
 
 .input {
   width: 200px;
   height: 40px;
-  border: none;
-  outline: none;
-  caret-color: rgb(255, 81, 0);
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
-  padding-left: 15px;
-  letter-spacing: 0.8px;
-  color: rgb(19, 19, 19);
-  font-size: 13.4px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px;
 }
 
+.input:focus {
+  outline: none;
+  border-color: #1b1b1b;
+}
+
+.add-song-button {
+  height: 40px;
+  background-color: #1b1b1b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.add-song-button:hover {
+  background-color: #252525;
+}
+
+.sort-container select {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #1b1b1b;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sort-container select:hover {
+  background-color: #252525;
+}
+
+.MainTitle {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1b1b1b;
+}
+
+.NumResult {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.Logo {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #1b1b1b;
+}
+
+.MusicListHeader {
+  display: flex;
+  justify-content: center;
+}
+
+/* .MusicListHeader h2 {
+  margin: 0;
+  font-size: 24px;
+} */
+
+.MusicListHeader select {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #1b1b1b;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.MusicListHeader select:hover {
+  background-color: #252525;
+}
+
+.PlaylistContainer {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
